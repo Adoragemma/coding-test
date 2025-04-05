@@ -13,6 +13,6 @@ async def get_sales_summary():
     return await sales_service.get_sales_summary()
 
 
-@sales_router.get("/user/{sales_id}", response_model=SalesRepDetailsResponseDto)
+@sales_router.get("/{sales_id}", response_model=SalesRepDetailsResponseDto)
 async def get_sales_rep_details(sales_id: int):
     return await sales_service.get_sales_rep_details(sales_id)
